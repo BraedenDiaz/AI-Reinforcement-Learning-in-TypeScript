@@ -24,6 +24,11 @@ interface MDP
      */
     getStates(): any;
 
+    /**
+     * Returns the start state for the MDP.
+     * 
+     * The start state depends on the exact problem definition and MDP.
+     */
     getStartState(): any;
 
     /**
