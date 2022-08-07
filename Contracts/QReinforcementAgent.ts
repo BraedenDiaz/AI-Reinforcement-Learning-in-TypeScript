@@ -9,10 +9,10 @@
  */
 export default abstract class QReinforcementAgent
 {
-    alpha: number;
-    gamma: number;
-    epsilon: number;
-    numOfTrainingEpisodes: number;
+    protected alpha: number;
+    protected gamma: number;
+    protected epsilon: number;
+    protected numOfTrainingEpisodes: number;
 
     /**
      * 
