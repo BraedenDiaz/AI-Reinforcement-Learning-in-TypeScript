@@ -73,8 +73,7 @@ export default class GridworldMDP implements MDP
      */
     public isTerminalState(state: GridWorldState): boolean
     {
-        const [row, col] = state;
-        return this._gridWorld.grid[row][col] !== -1;
+        return this.getReward(state) !== -1;
     }
 
     /**
@@ -87,7 +86,7 @@ export default class GridworldMDP implements MDP
      */
     public getPossibleActions(state: GridWorldState): GridWorldAction[]
     {
-        if (this.getReward(state) !== -1)
+        if (this.isTerminalState(state))
         {
             return [];
         }

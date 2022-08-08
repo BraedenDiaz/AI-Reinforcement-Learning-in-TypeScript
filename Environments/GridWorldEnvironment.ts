@@ -97,9 +97,10 @@ export default class GridWorldEnvironment implements Environment
         const nextState: GridWorldState = [row, col];
         const reward: number = this._mdp.getReward(nextState);
 
+        this._currentState = nextState;
+
         return [nextState, reward];
     }
-
     
     /**
      * Resets this environment by setting the current state of this enviroment

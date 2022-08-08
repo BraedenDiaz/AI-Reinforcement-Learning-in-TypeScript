@@ -52,7 +52,7 @@ export default class Util
         {
             const currentValue = arr[i];
 
-            if (currentValue> max)
+            if (currentValue > max)
             {
                 max = currentValue;
                 maxIdx = i;

@@ -7,7 +7,7 @@
  * it represents a reinforcement agent for an agent that uses Q-Learning and therefore,
  * it specifies the properties and methods needed for a Q-Learning agent to work.
  */
-export default abstract class QReinforcementAgent<T, U>
+export default abstract class QReinforcementAgent<T extends object, U extends object>
 {
     protected _environment: Environment;
     protected _alpha: number;
@@ -23,7 +23,7 @@ export default abstract class QReinforcementAgent<T, U>
      * @param epsilon The epsilon-greedy exploration vs. exploitation factor.
      * @param numOfTrainingEpisodes The number of training episodes to run.
      */
-    constructor(environment: Environment, alpha: number = 0.9, gamma: number = 0.9, epsilon: number = 0.9, numOfTrainingEpisodes: number = 1000)
+    constructor(environment: Environment, alpha: number = 0.9, gamma: number = 0.9, epsilon: number = 0.9, numOfTrainingEpisodes: number = 5000)
     {
         this._environment = environment;
         this._alpha = alpha;
@@ -67,7 +67,7 @@ export default abstract class QReinforcementAgent<T, U>
      * @param state The state to find the best action for.
      * @returns The currently best action to take from the specified state.
      */
-    protected abstract getBestActionForState(state: T): U;
+    protected abstract getBestActionForState(state: T): (U | null);
 
     /**
      * Returns some action to take from the specified state.
@@ -83,7 +83,7 @@ export default abstract class QReinforcementAgent<T, U>
      * @param state The state to get some action for.
      * @returns The currently best action from the state or a random action from the state.
      */
-    protected abstract getSomeAction(state: T): U;
+    protected abstract getSomeAction(state: T): (U | null);
 
     /**
      * The main update method where the AI agent learns new Q-values based on the Q-Learning
@@ -105,5 +105,9 @@ export default abstract class QReinforcementAgent<T, U>
      * @returns The currently best policy for the agent to follow from the specified state in
      * order to attempt to maximize all of its rewards.
      */
-    protected abstract getPolicy(state: T): U[];
+    public abstract getPolicy(state: T): U[];
+
+    protected abstract runEpisode(): void;
+
+    public abstract train(): void;
 }
