@@ -1,35 +1,19 @@
-/**
- * Author: Braeden Diaz
- * 
- * QReinforcementAgent Abstraction
- * 
- * An abstract class that repsents a reinforcement learning agent. Specifically,
- * it represents a reinforcement agent for an agent that uses Q-Learning and therefore,
- * it specifies the properties and methods needed for a Q-Learning agent to work.
- */
-export default abstract class QReinforcementAgent<T, U>
+import QReinforcementAgent from "../Contracts/QReinforcementAgent";
+
+export default class QLearningAgent<T, U> extends QReinforcementAgent<T, U>
 {
-    protected _environment: Environment;
-    protected _alpha: number;
-    protected _gamma: number;
-    protected _epsilon: number;
-    protected _numOfTrainingEpisodes: number;
+    private _qValues: Map<string, Map<U, number>>;
 
     /**
      * Constructor
      * 
-     * @param alpha The agent's learning rate.
-     * @param gamma The discount rate on rewards.
-     * @param epsilon The epsilon-greedy exploration vs. exploitation factor.
-     * @param numOfTrainingEpisodes The number of training episodes to run.
+     * @param environment The environment this QLearningAgent should work in.
      */
-    constructor(environment: Environment, alpha: number = 0.9, gamma: number = 0.9, epsilon: number = 0.9, numOfTrainingEpisodes: number = 1000)
+    constructor(environment: Environment)
     {
-        this._environment = environment;
-        this._alpha = alpha;
-        this._gamma = gamma;
-        this._epsilon = epsilon;
-        this._numOfTrainingEpisodes = numOfTrainingEpisodes;
+        super(environment);
+
+        this._qValues = new Map<string, Map<U, number>>();
     }
 
     /**
@@ -42,7 +26,10 @@ export default abstract class QReinforcementAgent<T, U>
      * @param action The action within the state to get the Q-value for.
      * @returns The Q-value for the state and action Q(s,a).
      */
-    protected abstract getQValue(state: T, action: U): number;
+    protected getQValue(state: T, action: U): number
+    {
+        throw new Error("Method not implemented.");
+    }
 
     /**
      * max_a Q(s,a)
@@ -52,7 +39,10 @@ export default abstract class QReinforcementAgent<T, U>
      * @param state The state to find the largest Q-value for.
      * @returns The largest Q-value for the state. --> max_a Q(s,a)
      */
-    protected abstract getMaxQValueForState(state: T): number;
+    protected getMaxQValueForState(state: T): number
+    {
+        throw new Error("Method not implemented.");
+    }
 
     /**
      * Returns the currently best action to take from the specified state.
@@ -67,7 +57,10 @@ export default abstract class QReinforcementAgent<T, U>
      * @param state The state to find the best action for.
      * @returns The currently best action to take from the specified state.
      */
-    protected abstract getBestActionForState(state: T): U;
+    protected getBestActionForState(state: T): U
+    {
+        throw new Error("Method not implemented.");
+    }
 
     /**
      * Returns some action to take from the specified state.
@@ -83,7 +76,10 @@ export default abstract class QReinforcementAgent<T, U>
      * @param state The state to get some action for.
      * @returns The currently best action from the state or a random action from the state.
      */
-    protected abstract getSomeAction(state: T): U;
+    protected getSomeAction(state: T): U
+    {
+        throw new Error("Method not implemented.");
+    }
 
     /**
      * The main update method where the AI agent learns new Q-values based on the Q-Learning
@@ -94,7 +90,10 @@ export default abstract class QReinforcementAgent<T, U>
      * @param nextState The next state the agent ended up in due to taking the action.
      * @param reward The reward the agent received from ending up in the next state.
      */
-    protected abstract update(state: T, action: U, nextState: T, reward: number): void;
+    protected update(state: T, action: U, nextState: T, reward: number): void
+    {
+        throw new Error("Method not implemented.");
+    }
 
     /**
      * Returns the currently best (hopefully optimal) policy for the agent to take
@@ -105,5 +104,9 @@ export default abstract class QReinforcementAgent<T, U>
      * @returns The currently best policy for the agent to follow from the specified state in
      * order to attempt to maximize all of its rewards.
      */
-    protected abstract getPolicy(state: T): U[];
+    protected getPolicy(state: T): U[]
+    {
+        throw new Error("Method not implemented.");
+    }
+    
 }
