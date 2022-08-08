@@ -54,11 +54,11 @@ interface MDP
     /**
      * Returns the reward for the passed in state.
      * 
-     * An AI agent typically wants to check the reward it receives
+     * An AI agent will typically want to check the reward it receives
      * from the next state it enters after performing an action.
      * 
      * @param state The state to get the reward for.
-     * @returns A number representing the reward for the state.
+     * @returns A numerical reward for the state.
      */
     getReward(state: any): number;
 }

@@ -15,6 +15,7 @@ export default abstract class QReinforcementAgent
     protected numOfTrainingEpisodes: number;
 
     /**
+     * Constructor
      * 
      * @param alpha The agent's learning rate.
      * @param gamma The discount rate on rewards.
