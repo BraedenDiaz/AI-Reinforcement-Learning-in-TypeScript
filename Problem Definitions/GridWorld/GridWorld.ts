@@ -1,4 +1,7 @@
 
+/**
+ * Author: Braeden Diaz
+ */
 export default class GridWorld
 {
     private _grid: number[][];
