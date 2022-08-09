@@ -3,7 +3,7 @@ This is a personal project of mine I decided to do in order to review and practi
 
 The goal of this project was to create an intermediate AI reinforcement learning agent based off of the popular AI Q-Learning Algorithm so that it could then be used as a baseline example of how an AI Q-Learning agent is implemented (in a typed programming language) to solve a common problem and then possibly be used or extended to solve other problems.
 
-I decided to write this Q-Learning agent in TypeScript in order to get a good understanding of the exact types and organization of the code to implement an AI Q-Learning agent. Many of the popular examples of Q-Learning agent implementations on the Internet tend to be written in Python. Although Python is very popular for data-intensive topics such as AI, machine learning, scientific computing, data mining, etc, it may not be the best for beginners trying to understand AI algorithms due to its lack of types. With this implementation in TypeScript, we can easily see the exact types, abstractions, and code organization for an implementation of a Q-Learning agent.
+I decided to write this Q-Learning agent in TypeScript in order to get a good understanding of the exact types and organization of the code to implement an AI Q-Learning agent. Many of the popular examples of Q-Learning agent implementations on the Internet tend to be written in Python. Although Python is very popular for data-intensive topics such as AI, machine learning, scientific computing, data mining, etc, it may not be the best for beginners trying to understand AI algorithms due to its lack of types. With this implementation in TypeScript, we can easily see the exact types, abstractions, and code organization used for an implementation of a Q-Learning agent.
 
 ## Problem
 
@@ -86,7 +86,7 @@ node App.js
 [App.ts](/App.ts) already has example code that instantiates an MDP, Environment, and QLearningAgent for the GridWorld problem. It trains the agent and prints out the optimal (best) policy the agent has learned for a variety of different spaces on the grid in order to reach the goal.
 
 ## References
-1. [CS188 Intro to AI UC Berkeley b Dan Klein and Pieter Abbeel](http://ai.berkeley.edu/lecture_videos.html)
+1. [CS188 Intro to AI UC Berkeley by Dan Klein and Pieter Abbeel](http://ai.berkeley.edu/lecture_videos.html)
 
 2. [Q-Learning: A Complete Example in Python by Dr. Daniel Soper](https://www.youtube.com/watch?v=iKdlKYG78j4)
 
