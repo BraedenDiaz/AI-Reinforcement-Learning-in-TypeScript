@@ -57,7 +57,7 @@ This section will explain how to run the AI agent.
 
 ### Prerequisites
 
-The following are required to run this web application:
+The following are required to run this AI agent:
 
 - NodeJS runtime environment and NPM which you can get on the [NodeJS website](https://nodejs.org/en/download/).
 
