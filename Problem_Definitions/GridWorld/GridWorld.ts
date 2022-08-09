@@ -5,7 +5,7 @@
  * A class that represents a problem definition for a GridWorld problem.
  * 
  * A GridWorld problem is a problem defined by a grid of spaces where each space
- * on the grid can be repsented with coordinates and actions can be taken
+ * on the grid can be represented with coordinates and actions can be taken
  * from each space on the grid.
  * 
  * Real-world examples of GridWorld problems include:
