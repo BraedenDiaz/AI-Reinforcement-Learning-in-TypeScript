@@ -49,7 +49,7 @@ This project only implements this one high-level problem for the Q-Learning agen
 
 - **Problem_Definitions/** - Contains subfolders with classes that describe the real-world problems an AI will attempt to solve. MDPs will reference these.
 
-For more detailed exlpanations, checkout the documentation comments in any of the TyeScript files.
+For more detailed exlpanations, checkout the documentation comments in any of the TypeScript files.
 
 ## Run the AI Agent
 
@@ -90,4 +90,4 @@ node App.js
 
 2. [Q-Learning: A Complete Example in Python by Dr. Daniel Soper](https://www.youtube.com/watch?v=iKdlKYG78j4)
 
-3. [Q-Learning: A Complete Example in Python Google CoLab Notebook](https://colab.research.google.com/drive/1E2RViy7xmor0mhqskZV14_NUj2jMpJz3)
+3. [Q-Learning: A Complete Example in Python [Google CoLab Notebook]](https://colab.research.google.com/drive/1E2RViy7xmor0mhqskZV14_NUj2jMpJz3)
