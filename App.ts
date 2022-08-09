@@ -6,7 +6,7 @@
 import QLearningAgent from "./Agents/QLearningAgent";
 import GridWorldEnvironment from "./Environments/GridWorldEnvironment";
 import GridworldMDP from "./MDPs/GridWorldMDP";
-import GridWorld from "./Problem Definitions/GridWorld/GridWorld";
+import GridWorld from "./Problem_Definitions/GridWorld/GridWorld";
 
 const warehouseMapGrid: number[][] = [
     [-100, -100, -100, -100, -100, 100, -100, -100, -100, -100, -100],

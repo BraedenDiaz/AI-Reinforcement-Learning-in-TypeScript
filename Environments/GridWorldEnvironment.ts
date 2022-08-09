@@ -1,5 +1,5 @@
 import GridworldMDP from "../MDPs/GridWorldMDP";
-import { GridWorldState, GridWorldAction } from "../Problem Definitions/GridWorld/GridWorldTypes";
+import { GridWorldState, GridWorldAction } from "../Problem_Definitions/GridWorld/GridWorldTypes";
 
 export default class GridWorldEnvironment implements Environment
 {

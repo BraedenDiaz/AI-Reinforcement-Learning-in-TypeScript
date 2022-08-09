@@ -1,5 +1,5 @@
-import GridWorld from "../Problem Definitions/GridWorld/GridWorld";
-import { GridWorldState, GridWorldAction } from "../Problem Definitions/GridWorld/GridWorldTypes";
+import GridWorld from "../Problem_Definitions/GridWorld/GridWorld";
+import { GridWorldState, GridWorldAction } from "../Problem_Definitions/GridWorld/GridWorldTypes";
 import Util from "../Util";
 
 /**
